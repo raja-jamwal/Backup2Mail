@@ -1,0 +1,34 @@
+Changes
+---------------------------
+This change log may be outdated, information regarding changes of a version are embeded inside the script.
+
+Changes:
+	Support for mangaling archive content	 3/2/12
+	Support for upload progress		 1/2/12
+	Support for last modified date/time	 30/1/12
+	Support for tree type directory listing  30/1/12
+	Email contain content in HTML
+	Email contain list of files in archive
+
+
+Dependacies
+---------------------------
+There are no module dependacies other than those that come with standard python installation, actually you only require python-minimal installation.
+
+Configure
+----------------------------
+Note: if you installed the script from debian package, then edit /usr/bin/backup2mail (you need root privelages)
+you need to configure the script for your email provider on your first use. edit the python file as follows, this will be used as default if parameters are not specified.
+
+smtp_server = "smtp.gmail.com"
+smtp_port = "587" # port may be 465 or 587, check with mail provider
+smtp_login = ["example@gmail.com","password"] # example@example.com, password
+mail_meta =  ["from@gmail.com", "to@gmail.com", "Backup"] # from, to, subject
+mail_text = "Backup content" # some text
+
+
+Things are pretty self explanatory, you can check with your email provider for the corresponding values.
+
+Usage
+------------------------------
+Check backup2mail --help, minimal command to backup a folder would be backup2mail -d <folder_name>/
